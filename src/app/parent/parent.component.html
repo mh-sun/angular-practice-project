@@ -1,1 +1,10 @@
-<p>Parent Works!</p>
+<div class="container">
+    <p>Parent Works!</p>
+    <p [hidden] = "isShown"> {{name}} </p>
+    <hr>
+    <button class="btn btn-primary"
+    (click)="toggle()">
+        Toggle
+    </button>
+    
+</div>
