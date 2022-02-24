@@ -1,9 +1,9 @@
 import { Directive,ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appNgIfAttribute]'
+  selector: '[appHighlight]'
 })
-export class NgIfAttributeDirective {
+export class HightlightDirective {
 
   constructor(private elem:ElementRef) {
     this.elem.nativeElement.style.fontSize = "20px"

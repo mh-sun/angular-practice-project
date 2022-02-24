@@ -4,13 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ItemComponent } from './item/item.component'
-import { NgIfAttributeDirective } from './directives/ng-if-attribute.directive';
+import { HightlightDirective } from './directives/highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemComponent,
-    NgIfAttributeDirective,
+    HightlightDirective,
+    UnlessDirective,
   ],
   imports: [
     BrowserModule,
