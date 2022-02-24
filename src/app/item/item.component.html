@@ -1,0 +1,13 @@
+<div *ngIf="currItem">
+ID: {{currItem.id}}, Name: {{currItem.name}}
+</div>
+
+<div *ngFor="let elem of items; let i = index" >Item {{i+1}}: {{elem.id}}, {{elem.name}}</div>
+
+<div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+
+<div appNgIfAttribute [bgColor]="color">Testing manual directive</div>

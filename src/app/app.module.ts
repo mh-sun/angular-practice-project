@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { ParentComponent } from './parent/parent.component';
+import { ItemComponent } from './item/item.component'
+import { NgIfAttributeDirective } from './directives/ng-if-attribute.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParentComponent
+    ItemComponent,
+    NgIfAttributeDirective,
   ],
   imports: [
     BrowserModule,
