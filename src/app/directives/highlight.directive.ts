@@ -9,11 +9,11 @@ export class HightlightDirective {
     this.elem.nativeElement.style.fontSize = "20px"
   }
 
-  @Input() bgColor = ''
+  @Input() appHighlight = ''
 
   @HostListener('mouseenter') onMouseEnter(){
-    // console.log(this.bgColor)
-    this.elem.nativeElement.style.backgroundColor = this.bgColor === ''?'red':this.bgColor
+    // console.log(this.appHighlight)
+    this.elem.nativeElement.style.backgroundColor = this.appHighlight === ''?'red':this.appHighlight
   }
 
   @HostListener('mouseleave') onMouseLeave(){

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ItemComponent } from './item/item.component'
 import { HightlightDirective } from './directives/highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { AddClassDirective } from './directives/add-class.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { UnlessDirective } from './directives/unless.directive';
     ItemComponent,
     HightlightDirective,
     UnlessDirective,
+    AddClassDirective,
   ],
   imports: [
     BrowserModule,

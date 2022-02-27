@@ -10,5 +10,9 @@ ID: {{currItem.id}}, Name: {{currItem.name}}
     <input type="radio" name="colors" (click)="color='cyan'">Cyan
   </div>
 
-<div appHighlight [bgColor]="color">Testing manual directive</div>
+<div [appHighlight]="color">Testing manual directive</div>
 <div *appUnless="false">Testing structural directive</div>
+
+<p [appAddClass]="'testCustomClass'">Hello World!!!</p>
+<p [appAddClass]="'testCustomClass2'">Hello World!!!</p>
+<p>Hello World!!!</p>
