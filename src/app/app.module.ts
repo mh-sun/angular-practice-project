@@ -10,6 +10,9 @@ import { UnlessDirective } from './directives/unless.directive';
 import { AddClassDirective } from './directives/add-class.directive';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { FirstOneComponent } from './first/first-one/first-one.component';
+import { FirstTwoComponent } from './first/first-two/first-two.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { SecondComponent } from './second/second.component';
     AddClassDirective,
     FirstComponent,
     SecondComponent,
+    FirstOneComponent,
+    FirstTwoComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
