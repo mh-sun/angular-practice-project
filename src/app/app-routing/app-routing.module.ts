@@ -6,21 +6,30 @@ import { FirstTwoComponent } from '../first/first-two/first-two.component';
 import { FirstComponent } from '../first/first.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { SecondComponent } from '../second/second.component';
+import { UnsavedGuard } from '../unsaved.guard';
 
 
 const routes: Routes = [
   {path: '', redirectTo:'first', pathMatch: 'full'},
-  {path:'first', component:FirstComponent, canActivate:[AuthGuard], children:[
-      {path:'one', component:FirstOneComponent},
-      {path:'two', component:FirstTwoComponent},
-    ]},
+  {path:'first', component:FirstComponent, canActivate:[AuthGuard], canDeactivate:[UnsavedGuard],
+    children:[
+      {
+        path:'',
+        canActivateChild:[AuthGuard],
+        children:[
+          {path:'one', component:FirstOneComponent},
+          {path:'two', component:FirstTwoComponent},
+        ]
+      },
+      {path:'login', component:PageNotFoundComponent}
+  ]},
   {path:'second', component:SecondComponent},
   {path: '**', component:PageNotFoundComponent},
 ];
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   exports: [
     RouterModule
